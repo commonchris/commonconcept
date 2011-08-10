@@ -1,0 +1,8 @@
+<form action="/dingus/<%= @dingus.id %>" method="post">
+  <input name="_method" type="hidden" value="put" />
+  <input type="text" name="name" id="name" value="<%= @dingus.name %>">
+  <input type="text" name="slug" id="slug" value="<%= @dingus.slug %>">
+  <input id="task_submit" name="commit" type="submit" value="Update" />
+</form>
+
+<a href="/dingus/<%= @dingus.id %>/delete">Delete this task</a>

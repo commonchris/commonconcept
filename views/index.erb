@@ -1,0 +1,10 @@
+<h2>Tasks:</h2>
+<% unless @dinguses.empty? %>
+  <ul>
+  <% @dinguses.each do |task| %>
+    <li><a href="/dingus/<%=task.id%>"><%= task.name %></a></li>
+  <% end %>
+  </ul>
+<% else %>
+  <p>No Dinguses!</p>
+<% end %>

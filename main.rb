@@ -11,7 +11,7 @@ require "#{Dir.pwd}/models/concoctive/dingus.rb"
 require "#{Dir.pwd}/services/dingus.rb"
 
 # automatically create the text table
-Dingus.auto_migrate! #unless Text.storage_exists?
+Dingus.auto_migrate! unless Dingus.storage_exists?
 
 
 
