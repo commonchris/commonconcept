@@ -4,14 +4,7 @@ require 'datamapper'
 
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/text.db")
 
-class Text
-  include DataMapper::Resource
-  
-  property :id, Serial
-  property :title, String
-  property :body, Text
-  property :created_at, DateTime
-end
+require 'models/text'
 
 # automatically create the text table
 Text.auto_migrate! unless Text.storage_exists?
